@@ -16,7 +16,7 @@ body {
 }
 
 .face {
-    background-color: pink;
+    background-color: #F598B1;
     width: 300px;
     height: 300px;
     border-radius: 100%;
@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px
+    gap: 8px
 }
 
 .eyes {
@@ -35,7 +35,7 @@ body {
     align-items: center;
 
     .eye {
-        background-color: #414fcc;
+        background-color: #025EA7;
         width: 40px;
         height: 80px;
         border-radius: 100%;
@@ -56,23 +56,45 @@ body {
 }
 
 .expression {
-    background-color: #ff0062;
     width: 200px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
 
     .blush {
         width: 200px;
         height: 40px;
-        background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .sombra {
+            background-color: #F1727F;
+            width: 40px;
+            height: 22px;
+            border-radius: 100%;
+            padding-top: 10px;
+            padding-left: 8px;
+        }
     }
 
     .mouth {
         width: 200px;
         height: 40px;
-        background-color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .interior-mouth {
+            background-color: #5C251A;
+            width: 11px;
+            height: 15px;
+            border-radius: 90%;
+            padding-top: 10px;
+            padding-left: 8px;
+        }
     }
 }
