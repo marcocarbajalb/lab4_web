@@ -1,3 +1,13 @@
+:root {
+    --color-fondo:  #b3d99c;
+    --color-piel:   #F598B1;
+    --color-ojo:    #025EA7;
+    --color-blush:  #F1727F;
+    --color-boca:   #5C251A;
+    --color-pie:    #D31A58;
+    --color-blanco: #ffffff;
+}
+
 body {
     display: block;
     margin: 0;
@@ -9,7 +19,7 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    background-color: #b3d99c;
+    background-color: var(--color-fondo);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +33,7 @@ body {
 }
 
 .brazo {
-    background-color: #F598B1;
+    background-color: var(--color-piel);
     width: 95px;
     height: 75px;
     border-radius: 50%;
@@ -39,7 +49,7 @@ body {
 }
 
 .cara {
-    background-color: #F598B1;
+    background-color: var(--color-piel);
     width: 300px;
     height: 300px;
     border-radius: 100%;
@@ -58,7 +68,7 @@ body {
     align-items: center;
 
     .ojo {
-        background-color: #025EA7;
+        background-color: var(--color-ojo);
         width: 40px;
         height: 80px;
         border-radius: 100%;
@@ -71,7 +81,7 @@ body {
             width: 16px;
             height: 30px;
             border-radius: 100%;
-            background-color: #ffffff;
+            background-color: var(--color-blanco);
         }
     }   
 }
@@ -93,7 +103,7 @@ body {
         align-items: center;
 
         .sombra {
-            background-color: #F1727F;
+            background-color: var(--color-blush);
             width: 40px;
             height: 22px;
             border-radius: 100%;
@@ -110,7 +120,7 @@ body {
         align-items: center;
 
         .interior-boca {
-            background-color: #5C251A;
+            background-color: var(--color-boca);
             width: 11px;
             height: 15px;
             border-radius: 90%;
@@ -129,7 +139,7 @@ body {
 }
 
 .pie {
-    background-color: #D31A58;
+    background-color: var(--color-pie);
     width: 115px;
     height: 70px;
 
