@@ -9,11 +9,9 @@
 }
 
 body {
-    display: block;
     margin: 0;
     height: 100vh;
     width: 100vw;
-    position: relative;
 }
 
 .container {
@@ -26,38 +24,54 @@ body {
     flex-direction: column;
 }
 
-.superior {
+.container > .superior {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
+.container > .pies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -15px;
+}
+
+.ojos ~ .expresion {
+    margin-top: 4px;
+}
+
+.blush + .boca {
+    margin-top: -5px;
+}
+
 .brazo {
     background-color: var(--color-piel);
-    width: 95px;
-    height: 75px;
+    width: clamp(60px, 8vw, 95px);
+    height: clamp(50px, 6vw, 75px);
     border-radius: 50%;
     margin-block-start: 40px;
 
     &:first-child {
-        margin-right: -45px;
+        margin-right: clamp(-30px, -4vw, -45px);
     }
 
     &:last-child {
-        margin-left: -45px;
+        margin-left: clamp(-30px, -4vw, -45px);
     }
 }
 
 .cara {
     background-color: var(--color-piel);
-    width: 300px;
-    height: 300px;
+    width: clamp(200px, 25vw, 300px);
+    height: clamp(200px, 25vw, 300px);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 8px
+    gap: 8px;
 }
 
 .ojos {
@@ -83,7 +97,23 @@ body {
             border-radius: 100%;
             background-color: var(--color-blanco);
         }
-    }   
+
+        &::after {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 100%;
+            background-color: var(--color-blanco);
+            margin-top: 4px;
+            margin-left: 12px;
+            opacity: 0.8;
+        }
+    }
+
+    .ojo:nth-child(2)::before {
+        margin-left: 4px;
+    }
 }
 
 .expresion {
@@ -107,12 +137,10 @@ body {
             width: 40px;
             height: 22px;
             border-radius: 100%;
-            padding-top: 10px;
-            padding-left: 8px;
         }
     }
 
-    .boca {
+    > .boca {
         width: 200px;
         height: 40px;
         display: flex;
@@ -124,24 +152,15 @@ body {
             width: 11px;
             height: 15px;
             border-radius: 90%;
-            padding-top: 10px;
-            padding-left: 8px;
         }
     }
 }
 
-.pies {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    margin-top: -15px;
-}
-
 .pie {
     background-color: var(--color-pie);
-    width: 115px;
-    height: 70px;
+    width: clamp(80px, 10vw, 115px);
+    height: clamp(50px, 6vw, 70px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
 
     &:first-child {
         border-radius: 77% 23% 47% 53% / 49% 49% 51% 51%;
